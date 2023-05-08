@@ -16,7 +16,7 @@ public struct Frame {
     }
 
     public init(rolls: [Roll]) {
-        self.rolls = rolls
+        self.rolls = []
     }
 
     /// The rolls of the current frame.

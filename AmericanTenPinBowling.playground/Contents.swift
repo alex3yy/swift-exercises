@@ -103,3 +103,6 @@ print("Total score:", totalScore)
 
 // V2 - The score is calculated using the standard guidelines.
 // To be implemented...
+
+// Run Tests
+FrameTests.defaultTestSuite.run()
