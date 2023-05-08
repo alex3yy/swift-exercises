@@ -1,5 +1,8 @@
 import Foundation
 
+// Run Tests
+FrameTests.defaultTestSuite.run()
+
 /// A valid sequence of rolls for one line of American Ten-Pin Bowling.
 let gameSequence = [
     Frame(rolls: [.strike]), // 1
@@ -103,6 +106,3 @@ print("Total score:", totalScore)
 
 // V2 - The score is calculated using the standard guidelines.
 // To be implemented...
-
-// Run Tests
-FrameTests.defaultTestSuite.run()
