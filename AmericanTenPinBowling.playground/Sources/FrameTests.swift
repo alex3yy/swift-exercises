@@ -15,4 +15,9 @@ public class FrameTests: XCTestCase {
         let frame = Frame(rolls: dummyRolls)
         XCTAssertEqual(frame.rolls, dummyRolls)
     }
+
+    public func test_rollEnum_equalityWithoutAssociatedValues() {
+        let dummyRoll: Frame.Roll = .strike
+        XCTAssertEqual(Frame.Roll.strike, dummyRoll)
+    }
 }
