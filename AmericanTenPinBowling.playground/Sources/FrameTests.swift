@@ -30,4 +30,9 @@ public class FrameTests: XCTestCase {
         }
         XCTAssertEqual(value, dummyValue)
     }
+
+    public func test_hasStrike_whenGivenStrikeRoll_shouldReturnTrue() {
+        let frame = Frame(rolls: [.strike])
+        XCTAssertEqual(frame.hasStrike, true, "Expected rolls to contain strike.")
+    }
 }
