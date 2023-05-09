@@ -1,7 +1,7 @@
 import Foundation
 
 /// A frame of a bowling game.
-public struct Frame {
+public struct Frame: Equatable {
 
     /// Constants defining the cases of a roll.
     public enum Roll: Equatable {

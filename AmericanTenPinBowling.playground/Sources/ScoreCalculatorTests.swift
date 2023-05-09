@@ -38,4 +38,22 @@ public class ScoreCalculatorTests: XCTestCase {
 
         XCTAssertEqual(result, expected)
     }
+
+    public func test_frameScore_whenGivenFrameOf20AndSequence_shouldReturn20() throws {
+        let dummyFrame = Frame(rolls: [.open(6), .spare])
+
+        let dummyGameSequence = [
+            dummyFrame,
+            Frame(rolls: [.strike]),
+            Frame(rolls: [.open(7)]),
+        ]
+
+        let scoreCalculator = ScoreCalculator()
+
+        let score = scoreCalculator.score(for: dummyFrame, in: dummyGameSequence)
+        let result = try XCTUnwrap(score)
+        let expected = 20
+
+        XCTAssertEqual(result, expected)
+    }
 }
