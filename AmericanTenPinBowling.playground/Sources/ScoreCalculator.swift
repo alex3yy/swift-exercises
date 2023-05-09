@@ -22,6 +22,13 @@ public struct ScoreCalculator {
         }
     }
 
+    public func scoreWithoutBonus(for frame: Frame) -> Int {
+        if frame.hasStrike {
+            return self.score(for: .strike)
+        }
+        return 0
+    }
+
     public func score(for frame: Frame, in gameSequence: [Frame]) -> Int? {
         var score = 0
 
