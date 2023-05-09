@@ -28,4 +28,14 @@ public class ScoreCalculatorTests: XCTestCase {
 
         XCTAssertEqual(result, expected)
     }
+
+    public func test_bonusRolls_whenGivenFrameWithOpen_shouldReturn0() {
+        let dummyFrame = Frame(rolls: [.open(6)])
+        let scoreCalculator = ScoreCalculator()
+
+        let result = scoreCalculator.bonusRolls(for: dummyFrame)
+        let expected = 0
+
+        XCTAssertEqual(result, expected)
+    }
 }
