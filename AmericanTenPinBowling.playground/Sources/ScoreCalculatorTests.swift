@@ -56,4 +56,11 @@ public class ScoreCalculatorTests: XCTestCase {
 
         XCTAssertEqual(result, expected)
     }
+
+    public func test_rollScore_whenGivenStrike_shouldReturn10() {
+        let scoreCalculator = ScoreCalculator()
+        let result = scoreCalculator.score(for: .strike)
+        let expected = 10
+        XCTAssertEqual(result, expected)
+    }
 }

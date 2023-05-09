@@ -11,6 +11,15 @@ public struct ScoreCalculator {
         }
     }
 
+    public func score(for roll: Frame.Roll) -> Int {
+        switch roll {
+        case .strike:
+            return 10
+        default:
+            return 0
+        }
+    }
+
     public func score(for frame: Frame, in gameSequence: [Frame]) -> Int? {
         var score = 0
 
