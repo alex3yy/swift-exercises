@@ -29,4 +29,3 @@ public class AmericanTenPinBowlingTests: XCTestCase {
         XCTAssertEqual(result, expected)
     }
 }
-

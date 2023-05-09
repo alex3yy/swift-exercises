@@ -3,6 +3,7 @@ import Foundation
 // Run Tests
 FrameTests.defaultTestSuite.run()
 AmericanTenPinBowlingTests.defaultTestSuite.run()
+ScoreCalculatorTests.defaultTestSuite.run()
 
 /// A valid sequence of rolls for one line of American Ten-Pin Bowling.
 let gameSequence = [
