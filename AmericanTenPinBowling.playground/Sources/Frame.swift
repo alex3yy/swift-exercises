@@ -3,6 +3,8 @@ import Foundation
 /// A frame of a bowling game.
 public struct Frame: Equatable {
 
+    private var id: UUID
+
     /// Constants defining the cases of a roll.
     public enum Roll: Equatable {
         /// A roll concluded with a spare.
@@ -16,6 +18,7 @@ public struct Frame: Equatable {
     }
 
     public init(rolls: [Roll]) {
+        self.id = UUID()
         self.rolls = rolls
     }
 
