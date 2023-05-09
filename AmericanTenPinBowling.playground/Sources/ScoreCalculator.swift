@@ -15,6 +15,8 @@ public struct ScoreCalculator {
         switch roll {
         case .strike:
             return 10
+        case .spare:
+            return 10
         default:
             return 0
         }
