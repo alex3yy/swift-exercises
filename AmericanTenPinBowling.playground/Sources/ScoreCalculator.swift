@@ -17,8 +17,8 @@ public struct ScoreCalculator {
             return 10
         case .spare:
             return 10
-        default:
-            return 0
+        case .open(let knockedPins):
+            return knockedPins
         }
     }
 

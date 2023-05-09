@@ -70,4 +70,11 @@ public class ScoreCalculatorTests: XCTestCase {
         let expected = 10
         XCTAssertEqual(result, expected)
     }
+
+    public func test_rollScore_whenGivenOpenOf7_shouldReturn7() {
+        let scoreCalculator = ScoreCalculator()
+        let result = scoreCalculator.score(for: .open(7))
+        let expected = 7
+        XCTAssertEqual(result, expected)
+    }
 }
