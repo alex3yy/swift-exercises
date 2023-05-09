@@ -25,8 +25,14 @@ public struct ScoreCalculator {
     public func scoreWithoutBonus(for frame: Frame) -> Int {
         if frame.hasStrike || frame.hasSpare {
             return self.score(for: .strike)
+        } else {
+            return frame.rolls.reduce(0) { partialResult, candidate in
+                if case .open(let knockedPins) = candidate {
+                    return partialResult + knockedPins
+                }
+                return partialResult
+            }
         }
-        return 0
     }
 
     public func score(for frame: Frame, in gameSequence: [Frame]) -> Int? {

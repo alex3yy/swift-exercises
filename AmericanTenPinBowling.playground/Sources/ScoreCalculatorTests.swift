@@ -99,4 +99,15 @@ public class ScoreCalculatorTests: XCTestCase {
 
         XCTAssertEqual(result, expected)
     }
+
+    public func test_frameScoreWithoutBonus_whenGivenFrameOf7_shouldReturn7() throws {
+        let dummyFrame = Frame(rolls: [.open(6), .open(1)])
+
+        let scoreCalculator = ScoreCalculator()
+
+        let result = scoreCalculator.scoreWithoutBonus(for: dummyFrame)
+        let expected = 7
+
+        XCTAssertEqual(result, expected)
+    }
 }
